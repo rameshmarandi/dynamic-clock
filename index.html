@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+ font-size: 62.5%;
+}
+.main_div{
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(206,21%,96%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#heading{
+  font-size: 20rem;
+  color:#2c3e50;
+}
+#para{
+  font-size: 12rem;
+  color: #16a085;
+}
+#btn{
+border: 0.5rem solid black;
+padding: 5rem;
+}
+#msg{
+  font-size: 10rem;
+}
+  </style>
+  <title>Document</title>
+</head>
+<body>
+<div class="main_div">
+  <h1 id="msg"></h1>
+  <h1 id="heading"></h1>
+  <p id="para"></p>
+</div>
+
+<!-- Code for Only Current Time -->
+<!--
+  <!-- <script>
+  var showTime = setInterval(time, 1000);
+
+  function time(){
+  var d = new Date();
+  var clock = d.toLocaleTimeString();
+ document.getElementById('heading').innerHTML = clock;
+  }
+  </script> -->
+
+  <!-- Code for Current Date & Time  -->
+
+<script>
+  setInterval(clockshowing, 1000);
+  function clockshowing(){
+    var d= new Date();
+    var month = d.getMonth() +1;
+    var day = d.getDate();
+    var year = d.getFullYear();
+    var time = d.toLocaleTimeString( );
+    document.getElementById('heading').innerHTML = time;
+    document.getElementById('para').innerHTML = "Date is : " + day + "/"+ month + "/ "+ year;
+
+  }
+</script> -->
+</body>
+</html>
